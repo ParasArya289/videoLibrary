@@ -3,6 +3,9 @@ fieldset,
 input {
   all: unset;
 }
+.Trigger{
+  all:unset;
+}
 .SaveBtn {
   background-color: var(--accent-color);
   border: 0;

@@ -9,6 +9,7 @@ import {
   MdWatchLater,
 } from "react-icons/md";
 import { VideoCard } from "../../Components/VideoCard.js/VideoCard";
+import AddToPlayListPopover from "../../Components/AddToPlaylistPopover/AddToPlayListPopover";
 
 export const Video = () => {
   const { videoId } = useParams();
@@ -71,9 +72,11 @@ export const Video = () => {
                   </button>
                 )}
 
-                <button className="vwt-btn">
-                  <MdPlaylistAdd />
-                </button>
+                <AddToPlayListPopover isAdding vid={findVideo}>
+                  <button className="vwt-btn">
+                    <MdPlaylistAdd />
+                  </button>
+                </AddToPlayListPopover>
               </div>
             </div>
           </div>

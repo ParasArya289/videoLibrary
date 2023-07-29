@@ -5,10 +5,11 @@ import "./AddToPlayListPopover.css";
 import { v4 } from "uuid";
 import { useData } from "../../Context/dataContext";
 
-const AddToPlayListPopover = ({ children }) => {
+const AddToPlayListPopover = ({ children, isAdding, vid }) => {
   const [formData, setFormData] = useState({
     title: "New Playlist",
     desc: "My new favorites",
+    content: [],
   });
 
   const {
@@ -29,10 +30,25 @@ const AddToPlayListPopover = ({ children }) => {
       payload: { _id: v4(), ...formData },
     });
   };
-  console.log(playlists);
+  const addToPlaylistHandler = (ID) => {
+    dispatchData({
+      type: "ADD_TO_PLAYLIST",
+      payload: {
+        id: ID,
+        data: vid,
+      },
+    });
+  };
+  const removePlaylistHandler = (ID) => {
+    dispatchData({
+      type: "REMOVE_PLAYLIST",
+      payload: ID,
+    });
+  };
+
   return (
     <Popover.Root>
-      <Popover.Trigger>{children}</Popover.Trigger>
+      <Popover.Trigger className="Trigger">{children}</Popover.Trigger>
       <Popover.Portal>
         <Popover.Content className="PopoverContent" sideOffset={5}>
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
@@ -66,6 +82,26 @@ const AddToPlayListPopover = ({ children }) => {
             <button className="SaveBtn" onClick={createNewPlaylistHandler}>
               Save
             </button>
+            {isAdding && (
+              <div>
+                {playlists?.map(({ _id, title }) => (
+                  <div
+                    style={{ display: "flex", justifyContent: "space-between" }}
+                  >
+                    <button
+                      onClick={() => addToPlaylistHandler(_id)}
+                      style={{ all: "unset", cursor: "pointer" }}
+                    >
+                      {title}
+                    </button>
+                    <RxCross2
+                      style={{ cursor: "pointer" }}
+                      onClick={() => removePlaylistHandler(_id)}
+                    />
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
           <Popover.Close className="PopoverClose" aria-label="Close">
             <RxCross2 />

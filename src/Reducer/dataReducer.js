@@ -32,25 +32,28 @@ export const dataReducer = (state, action) => {
         playlists: state.playlists.filter(({ _id }) => _id !== action.payload),
       };
 
-    // case "ADD_TO_PAYLIST":
-    //   const findAndAddToPlaylist = state.playlists?.map((playlist) =>
-    //     playlist._id === action.payload.id
-    //       ? { ...action.payload.data }
-    //       : playlist
-    //   );
-    //   return {
-    //     ...state,
-    //     playlists: findAndAddToPlaylist,
-    //   };
-    // case "REMOVE_FROM_PAYLIST":
-    //   const findAndAddRemoveFromPlaylist = state.playlists?.filter((playlist) =>
-    //     playlist._id === action.payload.id
-    //       ? { ...action.payload.data }
-    //       : playlist
-    //   );
-    //   return {
-    //     ...state,
-    //     playlists: findAndAddRemoveFromPlaylist,
-    //   };
+    case "ADD_TO_PLAYLIST":
+      const findAndAddToPlaylist = state.playlists?.map((playlist) =>
+        playlist._id === action.payload.id
+          ? {
+              ...playlist,
+              content: [action.payload.data, ...playlist.content],
+            }
+          : playlist
+      );
+      return {
+        ...state,
+        playlists: findAndAddToPlaylist,
+      };
+    case "REMOVE_FROM_PAYLIST":
+      const findAndAddRemoveFromPlaylist = state.playlists?.filter((playlist) =>
+        playlist._id === action.payload.id
+          ? { ...action.payload.data }
+          : playlist
+      );
+      return {
+        ...state,
+        playlists: findAndAddRemoveFromPlaylist,
+      };
   }
 };

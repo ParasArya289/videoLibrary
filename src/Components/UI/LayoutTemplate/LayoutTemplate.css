@@ -1,0 +1,11 @@
+.layout {
+  display: flex;
+  /* min-height: 100vh; */
+}
+.layout .sidebar {
+  flex-basis: 20%;
+  border-right: 1px solid rgba(128, 128, 128, 0.1);
+}
+.layout .main {
+  flex: 1;
+}

@@ -1,0 +1,38 @@
+.sidenavbar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-right: 1px solid rgba(128, 128, 128, 0.15);
+  text-align: left;
+  font-size: 1.1rem;
+}
+.sidebar-wrapper {
+  margin-top: 50px;
+}
+.sidenavbar a {
+  text-decoration: none;
+  padding: 15px;
+  color: var(--primary-text-color);
+  font-weight: var(--fw-medium);
+}
+.sidenavbar a > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.sidenavbar a > div > span:nth-child(1) {
+  font-size: 1.3rem;
+}
+
+.sidenavbar a:is(:hover, :focus) {
+  color: var(--secondary-text-color);
+}
+
+.highlight {
+  color: var(--accent-color) !important;
+}

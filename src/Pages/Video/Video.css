@@ -1,9 +1,15 @@
 .video-layout {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 }
 .video-layout .video {
   flex: 1;
+}
+.video-layout .video iframe {
+  width: 100%;
+  min-width: 300px;
+  aspect-ratio: 16/9;
 }
 .video-layout .suggestedVideos {
   display: flex;

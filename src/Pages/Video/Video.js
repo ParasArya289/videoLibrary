@@ -40,8 +40,8 @@ export const Video = () => {
       <div className="video-layout">
         <div className="video">
           <iframe
-            width="100%"
-            height="12%"
+            // width="100%"
+            // height="315"
             src={findVideo?.src}
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

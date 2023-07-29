@@ -12,7 +12,7 @@ export const Playlists = () => {
       <h3>Playlists</h3>
       <div className="categories-container">
         {playlists?.map((playlist) => (
-          <PlaylistCard playlists={playlist} />
+          <PlaylistCard playlist={playlist} />
         ))}
         <AddPlaylistCard />
       </div>

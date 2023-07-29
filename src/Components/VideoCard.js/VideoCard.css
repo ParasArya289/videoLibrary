@@ -6,6 +6,7 @@
   gap: 10px;
   font-size: 0.7rem;
   font-weight: var(--fw-medium);
+  cursor: pointer;
 }
 .videocard img {
   height: 140px;

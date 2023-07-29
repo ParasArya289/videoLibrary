@@ -1,8 +1,9 @@
 .categorycard {
-  width:280px;
+  width: 280px;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  cursor: pointer;
 }
 .categorycard img {
   height: 140px;

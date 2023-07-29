@@ -6,6 +6,7 @@ import { v4 } from "uuid";
 import { useData } from "../../Context/dataContext";
 
 const AddToPlayListPopover = ({ children, isAdding, vid }) => {
+  const [open, setOpen] = useState(false);
   const [formData, setFormData] = useState({
     title: "New Playlist",
     desc: "My new favorites",
@@ -29,6 +30,7 @@ const AddToPlayListPopover = ({ children, isAdding, vid }) => {
       type: "CREATE_PLAYLIST",
       payload: { _id: v4(), ...formData },
     });
+    setOpen(false);
   };
   const addToPlaylistHandler = (ID) => {
     dispatchData({
@@ -38,6 +40,7 @@ const AddToPlayListPopover = ({ children, isAdding, vid }) => {
         data: vid,
       },
     });
+    setOpen(false);
   };
   const removePlaylistHandler = (ID) => {
     dispatchData({
@@ -47,13 +50,13 @@ const AddToPlayListPopover = ({ children, isAdding, vid }) => {
   };
 
   return (
-    <Popover.Root>
+    <Popover.Root open={open} onOpenChange={setOpen}>
       <Popover.Trigger className="Trigger">{children}</Popover.Trigger>
       <Popover.Portal>
         <Popover.Content className="PopoverContent" sideOffset={5}>
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
             <p className="Text" style={{ marginBottom: 10 }}>
-              Dimensions
+              {!isAdding ? "Add Playlist" : "Add to playlist"}
             </p>
             <fieldset className="Fieldset">
               <label className="Label" htmlFor="width">

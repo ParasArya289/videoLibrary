@@ -10,7 +10,6 @@ export const DataContextProvider = ({ children }) => {
     const retrievedState = localStorage.getItem("state");
     if (retrievedState) {
       const parse = JSON.parse(retrievedState);
-      console.log(parse);
       dispatchData({ type: "INIT_DATA", payload: parse });
     }
   }, []);

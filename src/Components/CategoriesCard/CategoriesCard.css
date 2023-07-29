@@ -1,10 +1,12 @@
 .categorycard {
+  width:280px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 .categorycard img {
-  height: 6.5rem;
+  height: 140px;
+  object-fit: cover;
 }
 .categorycard text {
   font-weight: var(--fw-medium);

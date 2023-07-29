@@ -7,7 +7,7 @@ export const Home = () => {
   const {
     dataState: { categories },
   } = useData();
-  console.log(categories);
+
   return (
     <LayoutTemplate>
       <h2>Categories</h2>

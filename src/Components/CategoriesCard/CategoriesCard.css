@@ -1,0 +1,15 @@
+.categorycard {
+  display: flex;
+  flex-direction: column;
+}
+.categorycard img {
+  height: 6.5rem;
+}
+.categorycard text {
+  font-weight: var(--fw-medium);
+}
+.categorycard:is(:hover, :focus) img {
+  opacity: 0.6;
+  color: var(--secondary-color);
+  transition: all 0.2s ease;
+}

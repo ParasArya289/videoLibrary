@@ -4,3 +4,4 @@ export const initDataState = {
   categories: [...categories],
   videos: [...videos],
 };
+export const dataReducer = () => {};

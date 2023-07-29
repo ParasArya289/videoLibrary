@@ -1,6 +1,21 @@
+import { CategoriesCard } from "../../Components/CategoriesCard/CategoriesCard";
 import { LayoutTemplate } from "../../Components/UI/LayoutTemplate/LayoutTemplate";
+import { useData } from "../../Context/dataContext";
 import "./Home.css";
 
 export const Home = () => {
-  return <LayoutTemplate>{<div>Home</div>}</LayoutTemplate>;
+  const {
+    dataState: { categories },
+  } = useData();
+  console.log(categories);
+  return (
+    <LayoutTemplate>
+      <h2>Categories</h2>
+      <div className="categories-container">
+        {categories?.map((category) => (
+          <CategoriesCard category={category} />
+        ))}
+      </div>
+    </LayoutTemplate>
+  );
 };

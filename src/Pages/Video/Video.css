@@ -1,0 +1,12 @@
+.video-layout{
+    display: flex;
+    gap:20px;
+}
+.video-layout .video{
+    flex:1;
+}
+.video-layout .suggestedVideos{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}

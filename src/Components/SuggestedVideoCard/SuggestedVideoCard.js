@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router";
-import "./VideoCard.css";
+import "./SuggestedVideoCard";
 
-export const VideoCard = ({
+export const SuggestedVideoCard = ({
   video: { _id, title, views, thumbnail, src, category, creator },
 }) => {
   const navigate = useNavigate();

@@ -1,6 +1,7 @@
 .categorycard {
   display: flex;
   flex-direction: column;
+  gap:10px
 }
 .categorycard img {
   height: 6.5rem;

@@ -22,7 +22,7 @@ export const Explore = () => {
     clearTimeout(timerId);
     timerId = setTimeout(() => {
       setSearchKey(e.target.value);
-    }, 300);
+    }, 400);
   };
 
   return (

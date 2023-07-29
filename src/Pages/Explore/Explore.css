@@ -1,0 +1,15 @@
+.searchbar {
+  display: flex;
+  width: fit-content;
+  gap: 5px;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding-inline: 10px;
+  border-radius: 6px;
+  margin: 20px 0;
+}
+.searchbar input[type="text"] {
+  outline: none;
+  border: none;
+  padding: 20px;
+}

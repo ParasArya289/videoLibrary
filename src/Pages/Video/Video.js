@@ -35,11 +35,18 @@ export const Video = () => {
                 <span>{findVideo?.views} Views</span>
                 <span> | {findVideo?.creator}</span>
               </div>
+
+              {/* action */}
+
               <div className="action-btn">
                 <MdOutlineWatchLater />
                 <MdPlaylistAdd />
               </div>
             </div>
+          </div>
+          {/* My Notes */}
+          <div className="notes">
+            <h4>My Notes</h4>
           </div>
         </div>
         <div className="suggestedVideos">

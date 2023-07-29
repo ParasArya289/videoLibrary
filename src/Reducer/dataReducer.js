@@ -8,6 +8,11 @@ export const initDataState = {
 };
 export const dataReducer = (state, action) => {
   switch (action.type) {
+    case "INIT_DATA":
+      return {
+        ...state,
+        ...action.payload,
+      };
     case "ADD_TO_WATCHLATER":
       return {
         ...state,

@@ -37,3 +37,8 @@
 .highlight {
   color: var(--accent-color) !important;
 }
+@media (max-width:800px){
+  .sidenavbar a > div span:nth-child(2){
+    display: none;
+  }
+}

@@ -1,5 +1,5 @@
 .AddPlaylistCard {
-  border: 3px dotted var(--primary-text-color);
+  border: 3px dotted var(--accent-color);
   border-radius: 4px;
   display: grid;
   place-content: center;
@@ -9,4 +9,6 @@
 .AddPlaylistCard button {
   all: unset;
   font-size: 3rem;
+  color: var(--accent-color);
+  cursor: pointer;
 }

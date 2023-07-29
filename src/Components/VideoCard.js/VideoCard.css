@@ -1,4 +1,5 @@
 .videocard {
+  position: relative;
   width: 280px;
   display: flex;
   flex-wrap: wrap;
@@ -8,13 +9,27 @@
   font-weight: var(--fw-medium);
   cursor: pointer;
 }
+.wt-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: none;
+  border: 0;
+  padding: 6px;
+  border-radius: 0 0 0 6px;
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  cursor: pointer;
+  z-index: 99;
+}
+
 .videocard img {
   height: 140px;
   object-fit: cover;
 }
-.video-info{
+.video-info {
   display: flex;
-  gap:10px;
+  gap: 10px;
   align-items: flex-start;
 }
 .video-info img {
@@ -22,7 +37,7 @@
   width: 40px;
   border-radius: 50%;
 }
-.additional-info{
+.additional-info {
   font-weight: var(--fw-light);
   font-size: 0.7rem;
 }

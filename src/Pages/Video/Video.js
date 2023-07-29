@@ -4,6 +4,7 @@ import { LayoutTemplate } from "../../Components/UI/LayoutTemplate/LayoutTemplat
 import { useData } from "../../Context/dataContext";
 import "./Video.css";
 import { MdOutlineWatchLater, MdPlaylistAdd } from "react-icons/md";
+import { VideoCard } from "../../Components/VideoCard.js/VideoCard";
 
 export const Video = () => {
   const { videoId } = useParams();
@@ -51,7 +52,7 @@ export const Video = () => {
         </div>
         <div className="suggestedVideos">
           {videos?.map((video) => (
-            <SuggestedVideoCard video={video} />
+            <VideoCard video={video} />
           ))}
         </div>
       </div>

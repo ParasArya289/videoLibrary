@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router";
 import "./VideoCard.css";
+import { MdOutlineWatchLater } from "react-icons/md";
 
 export const VideoCard = ({
   video: { _id, title, views, thumbnail, src, category, creator },
@@ -8,6 +9,9 @@ export const VideoCard = ({
   return (
     <div className="videocard" onClick={() => navigate("/video/" + _id)}>
       <img src={thumbnail} alt={title} />
+      <button className="wt-btn">
+        <MdOutlineWatchLater />
+      </button>
       <div className="video-info">
         <img src={thumbnail} alt={creator} />
         <div>

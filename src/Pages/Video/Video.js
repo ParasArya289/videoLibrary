@@ -3,18 +3,36 @@ import { SuggestedVideoCard } from "../../Components/SuggestedVideoCard/Suggeste
 import { LayoutTemplate } from "../../Components/UI/LayoutTemplate/LayoutTemplate";
 import { useData } from "../../Context/dataContext";
 import "./Video.css";
-import { MdOutlineWatchLater, MdPlaylistAdd } from "react-icons/md";
+import {
+  MdOutlineWatchLater,
+  MdPlaylistAdd,
+  MdWatchLater,
+} from "react-icons/md";
 import { VideoCard } from "../../Components/VideoCard.js/VideoCard";
 
 export const Video = () => {
   const { videoId } = useParams();
   const {
-    dataState: { videos },
+    dataState: { videos, watchlater },
+    dispatchData,
   } = useData();
 
   const findVideo = videos?.find(({ _id }) => _id == +videoId);
 
-  console.log(findVideo, videoId);
+  const addToWatchLaterHandler = (e) => {
+    e.stopPropagation();
+    dispatchData({
+      type: "ADD_TO_WATCHLATER",
+      payload: findVideo,
+    });
+  };
+  const removeFromoWatchLaterHandler = (e) => {
+    e.stopPropagation();
+    dispatchData({
+      type: "REMOVE_FROM_WATCHLATER",
+      payload: findVideo?._id,
+    });
+  };
 
   return (
     <LayoutTemplate>
@@ -40,8 +58,22 @@ export const Video = () => {
               {/* action */}
 
               <div className="action-btn">
-                <MdOutlineWatchLater />
-                <MdPlaylistAdd />
+                {watchlater?.some((vid) => vid._id === findVideo?._id) ? (
+                  <button
+                    className="vwt-btn"
+                    onClick={removeFromoWatchLaterHandler}
+                  >
+                    <MdWatchLater />
+                  </button>
+                ) : (
+                  <button className="vwt-btn" onClick={addToWatchLaterHandler}>
+                    <MdOutlineWatchLater />
+                  </button>
+                )}
+
+                <button className="vwt-btn">
+                  <MdPlaylistAdd />
+                </button>
               </div>
             </div>
           </div>

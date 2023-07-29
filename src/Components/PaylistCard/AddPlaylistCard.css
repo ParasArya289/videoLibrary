@@ -1,0 +1,12 @@
+.AddPlaylistCard {
+  border: 3px dotted var(--primary-text-color);
+  border-radius: 4px;
+  display: grid;
+  place-content: center;
+  width: 200px;
+  height: 200px;
+}
+.AddPlaylistCard button {
+  all: unset;
+  font-size: 3rem;
+}

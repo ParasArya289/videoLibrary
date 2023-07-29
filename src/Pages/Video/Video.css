@@ -1,12 +1,20 @@
-.video-layout{
-    display: flex;
-    gap:20px;
+.video-layout {
+  display: flex;
+  gap: 20px;
 }
-.video-layout .video{
-    flex:1;
+.video-layout .video {
+  flex: 1;
 }
-.video-layout .suggestedVideos{
-    display: flex;
-    flex-direction: column;
-    gap:20px;
+.video-layout .suggestedVideos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.vwt-btn {
+  background-color: transparent;
+  border: 0;
+  padding: 6px;
+  font-size: 1.5rem;
+  color: var(--primary-text-color);
+  cursor: pointer;
 }

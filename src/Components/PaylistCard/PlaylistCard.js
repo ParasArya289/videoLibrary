@@ -20,7 +20,7 @@ export const PlaylistCard = ({ playlist }) => {
       </button>
       <img
         src={
-          playlist?.thubnail ||
+          playlist?.thumbnail ||
           "https://www.contentviewspro.com/wp-content/uploads/2017/07/default_image.png"
         }
         height="100"

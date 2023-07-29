@@ -42,6 +42,7 @@ export const dataReducer = (state, action) => {
         playlist._id === action.payload.id
           ? {
               ...playlist,
+              thumbnail: action.payload.data.thumbnail,
               content: [action.payload.data, ...playlist.content],
             }
           : playlist

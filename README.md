@@ -1,5 +1,4 @@
 # Video Library:
-###App Feature:
 
 ## Home Page
 

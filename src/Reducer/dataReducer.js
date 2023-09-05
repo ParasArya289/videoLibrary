@@ -27,9 +27,21 @@ export const dataReducer = (state, action) => {
       };
 
     case "CREATE_PLAYLIST":
+      const existingNames = new Set(
+        state.playlists.map((playlist) => playlist.title)
+      );
+      let newTitle = action.payload.title;
+      let counter = 1;
+
+      while (existingNames.has(newTitle)) {
+        newTitle = `${action.payload.title} (${counter})`;
+        counter++;
+      }
+
+      const newPlaylist = { ...action.payload, title: newTitle };
       return {
         ...state,
-        playlists: [...state.playlists, action.payload],
+        playlists: [...state.playlists, newPlaylist],
       };
     case "REMOVE_PLAYLIST":
       return {

@@ -20,7 +20,6 @@
   font-size: 1.2rem;
   color: var(--accent-color);
   cursor: pointer;
-  z-index: 99;
 }
 
 .videocard img {

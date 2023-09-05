@@ -3,6 +3,7 @@ import { RxCross2 } from "react-icons/rx";
 import { useData } from "../../Context/dataContext";
 import { useNavigate } from "react-router-dom";
 
+
 export const PlaylistCard = ({ playlist }) => {
   const { dispatchData } = useData();
   const removePlaylistHandler = (e) => {

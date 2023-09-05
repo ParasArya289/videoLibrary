@@ -7,9 +7,10 @@
   padding-inline: 10px;
   border-radius: 6px;
   margin: 20px 0;
+  width: 260px;
 }
 .searchbar input[type="text"] {
   outline: none;
   border: none;
-  padding: 20px;
+  padding: 10px;
 }

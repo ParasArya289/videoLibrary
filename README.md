@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# Video Library:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Home Page
 
-## Available Scripts
+- I can see a landing page with a list of few categories.
+- If I click on any one of the categories, I will be redirected to the video list page with the selected category.
 
-In the project directory, you can run:
+## Video Listing Page
 
-### `npm start`
+- I can see a video listing page where all the videos are listed.
+- On the Video Cards, I can see a call-to-action button,
+  - Watch Later: I can click on the "Watch Later" icon which will add the video to the watch later list & if I click on it again, it removes it from the watch later list.
+  - Data should persist on the watch later page even after page reload.
+- Each video should contain the number of views and author name.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Playlist Management
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- From the sidebar, I can navigate to my playlists where all my playlists are present with names & videos.
+- On the Playlist Page,
+  - I can create a new playlist.
+  - I can delete an existing playlist.
+  - I can remove a video from a particular playlist.
+  - Data should persist on the playlist page even after page reload.
 
-### `npm test`
+## Watch Later Page
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- I can add or remove a particular video to watch later from either a video listing page or from a single video page, which will add or remove the video from the Watch Later list.
+- Data should persist on this page even after page reload.
 
-### `npm run build`
+## Search Video
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- I can search for a video by title from the Explore Page.
+- On the Explore Page, list all your videos.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Single Video Page
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- I can click on a particular video thumbnail that redirects me to a single video page where I can,
+  - Save to Playlist: I can create a playlist and save any video to that playlist. I can create as many playlists as I want. I can also delete a playlist.
+  - Once a playlist is created, it should persist even after page reload. The videos added to the playlists should also persist.
+  - Watch Later: I can add or remove a particular video to watch later, which will add or remove the video from the Watch Later list.
+  - Notes for the video: I can see an "Add notes" Icon or button on which if I click, I open a text area where I can add notes for the video.
 
-### `npm run eject`
+## Notes on a Video
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- I can save notes for a video from the particular video page.
+- I can edit & update notes for a video from the particular video page.
+- I can delete notes of a video from a particular video page.
+- The notes should persist on page reload if added to a video.
